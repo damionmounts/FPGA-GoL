@@ -2,11 +2,11 @@ library ieee;
 use ieee.std_logic_1164.all;
 use ieee.numeric_std.all;
 
-entity OneHotLife is
+entity FPGAGoL is
 port(
-	--System Clocks:
+    --System Clocks:
     logic_clock : in std_logic;
-	video_clock : in std_logic;
+    video_clock : in std_logic;
     
     --Memory Port A0:
     a0_address : out std_logic_vector (19 downto 0);
@@ -43,9 +43,9 @@ port(
     vga_g : out std_logic_vector (5 downto 0);
     vga_b : out std_logic_vector (4 downto 0)
 );
-end OneHotLife;
+end FPGAGoL;
 
-architecture Behavioral of OneHotLife is
+architecture Behavioral of FPGAGoL is
     --Internal Read-Only Logic Memory Port:
     signal read_an_address : std_logic_vector (19 downto 0) := (others => '0');
     signal read_an_data_from : std_logic_vector (0 downto 0) := "0";
