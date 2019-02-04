@@ -67,9 +67,9 @@ architecture Behavioral of FPGAGoL is
     --Video Active:
     signal video_active : std_logic := '0';
     
-	--Signals To Prevent Incorrect Synthesis Warning:
-	signal dummy_0 : std_logic_vector (0 downto 0);
-	signal dummy_1 : std_logic_vector (0 downto 0);
+    --Signals To Prevent Incorrect Synthesis Warning:
+    signal dummy_0 : std_logic_vector (0 downto 0);
+    signal dummy_1 : std_logic_vector (0 downto 0);
 begin
     --Concurrent System Routing:
     with read_select select a0_address <= read_an_address when '0', write_an_address when '1';
@@ -540,7 +540,7 @@ begin
 	b1_data_to <= "0";
 	
 	--Video Output Logic:
-    vga_r <= (others => read_bn_data_from(0));
+        vga_r <= (others => read_bn_data_from(0));
 	vga_g <= (others => read_bn_data_from(0));
 	vga_b <= (others => read_bn_data_from(0));
 end Behavioral;
